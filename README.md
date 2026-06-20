@@ -2,12 +2,12 @@
 
 Work in progress.
 
-You give it a natural-language instruction and a single image of a Unitree G1 robot in a
-scene. It generates a short video of the robot doing the task, then reconstructs a metric,
-gravity-aligned 3D mesh of the scene from that video. The aim is to recover enough geometry
-and motion to train a humanoid control policy in simulation.
+Given a natural-language instruction and a single image of a Unitree G1 robot in a scene,
+the system generates a short video of the robot performing the task and reconstructs a
+metric, gravity-aligned 3D mesh of the scene from that video. The goal is to recover
+sufficient geometry and motion to train a humanoid control policy in simulation.
 
-There's a paper, *Generative Video for Humanoid Control*, with the full motivation and method.
+The paper, *Generative Video for Humanoid Control*, describes the full motivation and method.
 
 ## Layout
 
@@ -18,8 +18,8 @@ Each folder has its own README.
 
 ## Status
 
-The scene-reconstruction side works. Robot pose estimation, policy training, and
-real-world deployment aren't done yet.
+Scene reconstruction is implemented. Robot pose estimation, policy training, and
+real-world deployment are not yet complete.
 
 ## Built on
 

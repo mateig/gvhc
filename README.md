@@ -26,6 +26,4 @@ real-world deployment aren't done yet.
 Built on Veo 3.1 (Google DeepMind), [SAM 3](https://github.com/facebookresearch/sam3),
 [MoGe-2](https://github.com/microsoft/MoGe),
 [GeometryCrafter](https://github.com/TencentARC/GeometryCrafter), and
-[Open3D](https://www.open3d.org/). The overall approach follows
-[VideoMimic](https://github.com/hongsukchoi/VideoMimic), just with generated video instead
-of real captured video.
+[Open3D](https://www.open3d.org/).

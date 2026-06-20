@@ -1,4 +1,4 @@
-# Generative Video for Humanoid Control
+# Generative Video for Humanoid Control (GVHC)
 
 Work in progress.
 

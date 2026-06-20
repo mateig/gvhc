@@ -1,0 +1,6 @@
+google-genai
+pillow
+numpy
+opencv-python
+open3d
+scikit-image

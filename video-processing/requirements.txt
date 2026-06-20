@@ -1,0 +1,14 @@
+numpy
+scipy
+einops
+tqdm
+pyyaml
+omegaconf
+opencv-python-headless
+torch
+torchvision
+diffusers
+transformers
+accelerate
+safetensors
+huggingface_hub

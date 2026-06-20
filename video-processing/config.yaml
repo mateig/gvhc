@@ -1,0 +1,92 @@
+data: data
+
+skip:
+  run: [sam3, moge, geocrafter, sfm, alignment, sfm, alignment, mesh]
+  render: [sam3, moge, geocrafter, sfm, alignment, sfm, alignment, mesh]
+
+video:
+  source: video.mp4
+  npz: video.npz
+  fps: 24
+
+keypoints:
+  npz: keypoints.npz
+
+moge:
+  run:
+    npz: moge.npz
+    weights: weights/moge/model.pt
+    num_tokens: 4500
+    batch_size: 8
+  render:
+    output: moge.mp4
+    point_size: 2.0
+    camera: camera.json
+
+geocrafter:
+  run:
+    npz: geocrafter.npz
+    weights: weights/geocrafter
+    process_resolution: 1024
+    steps: 25
+    window_size: 144
+    overlap: 25
+    batch_size: 8
+  render:
+    output: geocrafter.mp4
+    point_size: 2.0
+    camera: camera.json
+
+sam3:
+  run:
+    npz: sam3.npz
+    prompt: humanoid robot
+  render:
+    output: sam3.mp4
+    alpha: 0.5
+
+sfm:
+  run:
+    npz: sfm.npz
+    gaps: [1, 2, 4, 8, 16, 32, 64]
+    dilate_ksize: 25
+    depth_percentile: 50.0
+    sample: 3000
+    cycle_threshold: 0.5
+    ransac_threshold: 0.02
+    ransac_iters: 300
+    min_inliers: 50
+    smooth_window: 11
+    smooth_polyorder: 2
+  render:
+    output: sfm.mp4
+    point_size: 2.0
+    camera: camera.json
+
+alignment:
+  run:
+    npz: alignment.npz
+    p1: 11
+    p2: 14
+    p3: 8
+    known_distance: 1.10
+    offset: [0.0, 0.0, -0.1]
+  render:
+    output: alignment.mp4
+    point_size: 2.0
+    axis_length: 0.5
+    camera: camera.json
+
+mesh:
+  run:
+    stl: mesh.stl
+    dilate_ksize: 25
+    radius: 1.0
+    voxel_size: 0.02
+    outlier_nb_neighbors: 20
+    outlier_std_ratio: 2.0
+    normal_radius: 0.1
+    normal_max_nn: 30
+    poisson_depth: 7
+    density_quantile: 0.05
+    smooth_iters: 10

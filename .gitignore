@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.venv-*/
+*.egg-info/
+
+# OS
+.DS_Store
+
+# Model weights (download separately, see Makefile)
+weights/
+
+# Generated data and outputs (large binaries)
+data/
+output/
+*.npz
+*.npy
+*.mp4
+*.stl
+*.obj
+*.ply
+
+# Secrets
+.env
+
+# Local tool state
+.claude/
